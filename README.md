@@ -28,27 +28,37 @@ This command retrieves the latest version of PipeCheck from GitHub, compiles it,
 PipeCheck reads input from stdin, thus can be used in a pipeline as follows:
 
 ```bash
-cat data.txt | ./PipeCheck [options]
+cat data.txt | PipeCheck [options] | your_command
 ```
+
+![Analyzing Input before Processing](https://raw.githubusercontent.com/bsysop/PipeCheck/main/screenshots/check_input.png)
+
 
 ### Options
 
 - `-urls`: Validate each line of the input as a URL.
 - `-domains`: Validate each line of the input as a domain.
 
+
 ### Examples
 
-Validate URLs from a file and ask for user confirmation to proceed:
+Validate URLs from a file and if passed the validation, ask for user confirmation to proceed:
 
 ```bash
-cat urls.txt | ./PipeCheck -urls
+cat urls.txt | PipeCheck -urls
 ```
 
-Validate domains from a file and ask for user confirmation to proceed:
+![Failed validation of Urls](https://raw.githubusercontent.com/bsysop/PipeCheck/main/screenshots/urls_validation_failed.png)
+
+
+Validate domains from a file and if passed the validation, ask for user confirmation to proceed:
 
 ```bash
-cat domains.txt | ./PipeCheck -domains
+cat domains.txt | PipeCheck -domains
 ```
+
+![Passed validation of Domains](https://raw.githubusercontent.com/bsysop/PipeCheck/main/screenshots/domains_validation_passed.png)
+
 
 ## Output
 
