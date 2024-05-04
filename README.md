@@ -15,18 +15,13 @@ PipeCheck is a command-line tool written in Go that reads from stdin, validates 
 
 ## Installation
 
-Clone this repository to your local machine using:
+You can install PipeCheck directly using the `go install` command:
 
 ```bash
-git clone https://github.com/bsysop/PipeCheck.git
-cd PipeCheck
+go install github.com/bsysop/PipeCheck@latest
 ```
 
-Compile the program:
-
-```bash
-go build -o PipeCheck
-```
+This command retrieves the latest version of PipeCheck from GitHub, compiles it, and installs the executable in your Go bin directory, making it accessible from anywhere on your system.
 
 ## Usage
 
