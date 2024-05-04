@@ -6,6 +6,7 @@
 # Compiled
 PipeCheck
 test.txt
+.DS_Store
 
 # User-specific files
 *.rsuser
